@@ -31,10 +31,10 @@ class FrieslandhuurtHouseOffer(HouseOffer):
 
             if self.download_assets:
                 print(f"Downloading assets for {unique_house_name}")
-                uris = self.get_uris(house)
+                uris = self.__get_uris(house)
                 request_functions.download_asset(uris, unique_house_name)
 
-    def get_uris(self, house):
+    def __get_uris(self, house):
         uris = []
         uri_locations = house["pictures"] + house["floorplans"]
 
@@ -42,4 +42,3 @@ class FrieslandhuurtHouseOffer(HouseOffer):
             uris.append(self.domainname + entry["uri"])
 
         return uris
-

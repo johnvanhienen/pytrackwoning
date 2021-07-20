@@ -1,6 +1,6 @@
 import requests
-
 from utils import file_functions
+
 
 def download_asset(uris, house_name):
     media_path = f"media/{house_name}"
