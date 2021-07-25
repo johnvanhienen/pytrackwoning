@@ -7,4 +7,5 @@ def main():
     print(frl_houses)
 
 
-main()
+if __name__ == '__main__':
+    main()
